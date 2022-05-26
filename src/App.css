@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+}
+
+.card-button {
+  border: none;
+  padding: 0;
+  background: none;
+  margin: 0 ;
+  margin-left: 20px;
+}
