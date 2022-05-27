@@ -1,0 +1,9 @@
+img {
+  width: 150px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(244, 255, 145);
+}

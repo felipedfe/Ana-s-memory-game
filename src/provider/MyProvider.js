@@ -7,6 +7,7 @@ function MyProvider(props) {
   const [numberOfSelected, setNumberOfSelected] = useState(0);
   const [idsForComparison, setIdsForComparison] = useState([]);
   const [waitForTimeout, setWaitForTimeout] = useState(false);
+  const [difficulty, setDifficulty] = useState("easy");
 
   useEffect(() => {
     const importAllImages = (require) => {
@@ -21,8 +22,10 @@ function MyProvider(props) {
       })
       return imagesList;
     };
+
     const cardImages = importAllImages(require.context('../images/', false, /\.png$/i))
     setCardList(cardImages);
+    console.log(cardImages);
   }, [])
 
   const providerState = {
@@ -33,7 +36,9 @@ function MyProvider(props) {
     idsForComparison,
     setIdsForComparison,
     waitForTimeout,
-    setWaitForTimeout
+    setWaitForTimeout,
+    difficulty,
+    setDifficulty
   }
   return (
     <myContext.Provider value={providerState}>
