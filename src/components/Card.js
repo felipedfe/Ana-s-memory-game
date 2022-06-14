@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import myContext from "../context/myContext";
-import backImage from '../images/back-image'
+// import backImage1 from '../images/back-image'
 
 function Card(props) {
   const { id, imageSource, selected, turnedUp } = props;
@@ -10,7 +10,8 @@ function Card(props) {
     setNumberOfSelected,
     idsForComparison,
     setIdsForComparison,
-    waitForTimeout } = useContext(myContext);
+    waitForTimeout,
+    backImage } = useContext(myContext);
 
   // Função que atualiza a lista setando a carta clicada como selected: true
   // const updateList = () => {

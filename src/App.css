@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  background-color: rgb(203, 250, 253);
+}
+
 .cards-container {
   display: flex;
 }
@@ -12,6 +16,5 @@
   border: none;
   padding: 0;
   background: none;
-  margin: 0 ;
-  margin-left: 20px;
+  margin: 10px ;
 }

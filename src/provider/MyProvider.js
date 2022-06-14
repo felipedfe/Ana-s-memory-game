@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import myContext from "../context/myContext";
 
 function MyProvider(props) {
@@ -7,26 +7,26 @@ function MyProvider(props) {
   const [numberOfSelected, setNumberOfSelected] = useState(0);
   const [idsForComparison, setIdsForComparison] = useState([]);
   const [waitForTimeout, setWaitForTimeout] = useState(false);
-  const [difficulty, setDifficulty] = useState("easy");
+  const [backImage, setBackImage] = useState('');
 
-  useEffect(() => {
-    const importAllImages = (require) => {
-      const imagesList = [];
-      require.keys().map((key) => {
-        return imagesList.push({
-          id: key.substring(2, 6),
-          imageSource: require(key),
-          selected: false,
-          turnedUp: false,
-        })
-      })
-      return imagesList;
-    };
+  // useEffect(() => {
+  //   const importAllImages = (require) => {
+  //     const imagesList = [];
+  //     require.keys().map((key) => {
+  //       return imagesList.push({
+  //         id: key.substring(2, 6),
+  //         imageSource: require(key),
+  //         selected: false,
+  //         turnedUp: false,
+  //       })
+  //     })
+  //     return imagesList;
+  //   };
 
-    const cardImages = importAllImages(require.context('../images/', false, /\.png$/i))
-    setCardList(cardImages);
-    console.log(cardImages);
-  }, [])
+  //   const cardImages = importAllImages(require.context('../images/', false, /\.png$/i))
+  //   setCardList(cardImages);
+  //   // console.log(cardImages);
+  // }, [])
 
   const providerState = {
     cardList,
@@ -37,8 +37,8 @@ function MyProvider(props) {
     setIdsForComparison,
     waitForTimeout,
     setWaitForTimeout,
-    difficulty,
-    setDifficulty
+    backImage,
+    setBackImage
   }
   return (
     <myContext.Provider value={providerState}>

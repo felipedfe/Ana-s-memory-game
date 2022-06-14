@@ -1,0 +1,124 @@
+body {
+  background-color: rgb(151, 255, 148);
+  background-image: url('../images/fundo/bolas3.png');
+  background-size: 80px;
+}
+
+.title {
+  font-family: 'Amatic SC', cursive;
+  text-shadow: 6px 6px rgb(150, 237, 255);
+  color: rgb(132, 12, 202);
+  /* background-color: yellow; */
+}
+
+.title-section {
+  /* border: 5px dotted blue; */
+  background-color: rgb(255, 255, 255);
+  box-shadow: 8px 8px rgb(170, 113, 203);
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  margin: auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-part-1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -35px;
+  font-size: 90px;
+}
+
+.title-part-2 {
+  display: flex;
+  justify-content: center;
+  /* background-color: blue; */
+}
+
+h2 {
+  
+  /* font-size: 10vw; */
+}
+
+h3 {
+  font-size: 110px;
+  /* text-shadow: 3px 3px rgb(0, 238, 255) !important; */
+}
+
+.ana-title {
+  animation: blinker 1s step-start infinite;
+  font-family: 'Amatic SC', cursive;
+  font-size: 220px;
+  color: rgb(84, 226, 56);
+  margin-left: 40px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.difficulty-btns-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  /* background-color: blue; */
+  width: 40%;
+}
+
+.easy-button, .hard-button {
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  /* padding: 15px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(147, 52, 125);
+  box-shadow: 5px 5px rgb(255, 255, 255);
+  font-weight: 700;
+  border: none; 
+  /* font-size: large; */
+  /* font-kerning: none; */
+  /* margin-top: 20px; */
+  margin-top: 5px;
+  width: 90 px;
+  height: 60px;
+}
+
+.choose-cardback-container {
+  margin-top: 25px;
+  color: rgb(132, 12, 202);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.choose-text{
+  display: flex;
+  justify-content: center;
+}
+
+.backimages-container{
+  margin-top: 25px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.cardBack {
+  margin-right: 15px;
+}
+
+h4 {
+  background-color: white;
+}
+
+@keyframes blinker {
+  25% {
+    color: rgb(255, 0, 8);
+  }
+}

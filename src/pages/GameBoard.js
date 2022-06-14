@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import myContext from '../context/myContext';
 import Card from '../components/Card';
-import '../style/gameboard.css'
+import '../style/Gameboard.css'
 
 function GameBoard({ children }) {
   const { cardList,
@@ -10,7 +11,9 @@ function GameBoard({ children }) {
     setNumberOfSelected,
     idsForComparison,
     setIdsForComparison,
-    setWaitForTimeout, } = useContext(myContext);
+    setWaitForTimeout } = useContext(myContext);
+
+  const navigate = useNavigate();
 
   // Função que verifica se as cartas são iguais
   const compareIds = (idsArray) => {
@@ -27,16 +30,6 @@ function GameBoard({ children }) {
   }
 
   // Função que atualiza a lista setando os ids como turnedUp: true
-  // const updateList = () => {
-  //   idsForComparison.forEach((id) => {
-  //     const cardIndex = cardList.findIndex((item) => item.id === id);
-  //     const selectedCard = cardList.find((item) => item.id === id);
-  //     const filteredList = cardList.filter((item) => item.id !== id);
-  //     selectedCard.turnedUp = true;
-  //     filteredList.splice(cardIndex, 0, selectedCard);
-  //     setCardList(filteredList);
-  //   })
-  // }
   const updateTurnedUp = () => {
     idsForComparison.forEach((id) => {
       for (let card of cardList) {
@@ -69,6 +62,13 @@ function GameBoard({ children }) {
     }
   }, [numberOfSelected])
 
+  useEffect(() => {
+    if (cardList.every((card) => card.turnedUp) && cardList.length !== 0) {
+      console.log("VOCÊ GANHOU!")
+    }
+    console.log(cardList)
+  }, [cardList])
+
   return (
     <>
       {children}
@@ -79,14 +79,12 @@ function GameBoard({ children }) {
           selected={card.selected}
           turnedUp={card.turnedUp}
           imageSource={card.imageSource} />)}
-        {/* {cardList.map((card) => <Card
-          key={card.id}
-          id={card.id}
-          selected={card.selected}
-          turnedUp={card.turnedUp}
-          imageSource={card.imageSource} />)} */}
-        {numberOfSelected}
       </div>
+      <button
+        onClick={() => navigate('/')}
+      >
+        Voltar
+      </button>
     </>
   )
 }

@@ -1,8 +1,10 @@
 import React from 'react'
-import '../style/header.css'
+import '../style/Header.css'
 
 function Header () {
-  return <p>Header</p>
+  return (
+    <section className="header-section" />
+  )
 }
 
 export default Header;
