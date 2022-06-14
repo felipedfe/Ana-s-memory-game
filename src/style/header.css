@@ -1,6 +1,15 @@
 .header-section {
   height: 47px;
-  background-color: rgb(255, 161, 67);
-  border-bottom: 5px solid rgb(255, 255, 255);
+  /* background-color: rgb(132, 12, 202); */
+  background-color: rgb(147, 52, 125);;
+  /* border-bottom: 5px solid rgb(255, 255, 255); */
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.timer-container {
+  margin-top: 5px;
+  font-size: 20px;
 }

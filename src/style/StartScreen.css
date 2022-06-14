@@ -6,7 +6,7 @@ body {
 
 .title {
   font-family: 'Amatic SC', cursive;
-  text-shadow: 6px 6px rgb(150, 237, 255);
+  text-shadow: 6px 6px rgb(66, 224, 255);
   color: rgb(132, 12, 202);
   /* background-color: yellow; */
 }
@@ -14,7 +14,7 @@ body {
 .title-section {
   /* border: 5px dotted blue; */
   background-color: rgb(255, 255, 255);
-  box-shadow: 8px 8px rgb(170, 113, 203);
+  box-shadow: 8px 8px rgb(66, 224, 255);
   /* display: flex;
   flex-direction: column;
   justify-content: center; */
@@ -33,6 +33,7 @@ body {
 }
 
 .title-part-2 {
+  animation: blinker 1s step-start infinite;
   display: flex;
   justify-content: center;
   /* background-color: blue; */
@@ -49,11 +50,24 @@ h3 {
 }
 
 .ana-title {
-  animation: blinker 1s step-start infinite;
+  /* animation: blinker 1s step-start infinite; */
   font-family: 'Amatic SC', cursive;
   font-size: 220px;
   color: rgb(84, 226, 56);
-  margin-left: 40px;
+  /* margin-left: 40px; */
+}
+
+.heart-icon-r {
+  /* animation: blinker 1s step-start infinite; */
+  margin-top: 10px;
+  font-size: 100px;
+}
+.heart-icon-l {
+  /* animation: blinker 1s step-start infinite; */
+  margin-top: 10px;
+  margin-right: -12px;
+  font-size: 100px;
+
 }
 
 .buttons-container {
@@ -69,7 +83,7 @@ h3 {
   width: 40%;
 }
 
-.easy-button, .hard-button {
+.navigation-button {
   font-family: 'Amatic SC', cursive;
   font-size: 40px;
   /* padding: 15px; */
@@ -84,7 +98,7 @@ h3 {
   /* font-size: large; */
   /* font-kerning: none; */
   /* margin-top: 20px; */
-  margin-top: 5px;
+  margin-top: 20px;
   width: 90 px;
   height: 60px;
 }

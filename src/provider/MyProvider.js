@@ -8,25 +8,8 @@ function MyProvider(props) {
   const [idsForComparison, setIdsForComparison] = useState([]);
   const [waitForTimeout, setWaitForTimeout] = useState(false);
   const [backImage, setBackImage] = useState('');
-
-  // useEffect(() => {
-  //   const importAllImages = (require) => {
-  //     const imagesList = [];
-  //     require.keys().map((key) => {
-  //       return imagesList.push({
-  //         id: key.substring(2, 6),
-  //         imageSource: require(key),
-  //         selected: false,
-  //         turnedUp: false,
-  //       })
-  //     })
-  //     return imagesList;
-  //   };
-
-  //   const cardImages = importAllImages(require.context('../images/', false, /\.png$/i))
-  //   setCardList(cardImages);
-  //   // console.log(cardImages);
-  // }, [])
+  const [timeOver, setTimeOver] = useState(false);
+  const [id, setId] = useState(undefined);
 
   const providerState = {
     cardList,
@@ -38,7 +21,11 @@ function MyProvider(props) {
     waitForTimeout,
     setWaitForTimeout,
     backImage,
-    setBackImage
+    setBackImage,
+    timeOver,
+    setTimeOver,
+    id,
+    setId
   }
   return (
     <myContext.Provider value={providerState}>

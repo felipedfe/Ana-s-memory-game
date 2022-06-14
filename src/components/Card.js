@@ -14,14 +14,6 @@ function Card(props) {
     backImage } = useContext(myContext);
 
   // Função que atualiza a lista setando a carta clicada como selected: true
-  // const updateList = () => {
-  //   const cardIndex = cardList.findIndex((item) => item.id === id);
-  //   const selectedCard = cardList.find((item) => item.id === id);
-  //   const filteredList = cardList.filter((item) => item.id !== id);
-  //   selectedCard.selected = true;
-  //   filteredList.splice(cardIndex, 0, selectedCard);
-  //   setCardList(filteredList);
-  // }
   const updateSelected = () => {
     for (let card of cardList) {
       if (card.id === id) card.selected = true;

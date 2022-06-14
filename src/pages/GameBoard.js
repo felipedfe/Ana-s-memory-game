@@ -1,7 +1,8 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import myContext from '../context/myContext';
 import Card from '../components/Card';
+import Timer from '../components/Timer';
 import '../style/Gameboard.css'
 
 function GameBoard({ children }) {
@@ -11,9 +12,15 @@ function GameBoard({ children }) {
     setNumberOfSelected,
     idsForComparison,
     setIdsForComparison,
-    setWaitForTimeout } = useContext(myContext);
+    setWaitForTimeout,
+    timeOver,
+    setTimeOver,
+    id } = useContext(myContext);
 
   const navigate = useNavigate();
+
+  // State
+  const [allTurnedUp, setAllTurnedUp] = useState(false)
 
   // Função que verifica se as cartas são iguais
   const compareIds = (idsArray) => {
@@ -45,6 +52,24 @@ function GameBoard({ children }) {
     setWaitForTimeout(false);
   }
 
+  const renderingConditions = () => {
+    if (timeOver) {
+      console.log("--->", timeOver)
+      return <h1>Você perdeu...</h1>
+    }
+    if (allTurnedUp) {
+      return <h1>Você Ganhou!</h1>
+    } else {
+      console.log(timeOver)
+      return cardList.map((card) => <Card
+        key={card.id}
+        id={card.id}
+        selected={card.selected}
+        turnedUp={card.turnedUp}
+        imageSource={card.imageSource} />)
+    }
+  }
+
   // Se duas cartas forem selecionadas essa verificação acontece
   useEffect(() => {
     if (numberOfSelected === 2) {
@@ -62,30 +87,42 @@ function GameBoard({ children }) {
     }
   }, [numberOfSelected])
 
+  // Verifica se o jogador conseguiu achar todos os pares
   useEffect(() => {
     if (cardList.every((card) => card.turnedUp) && cardList.length !== 0) {
       console.log("VOCÊ GANHOU!")
+      setAllTurnedUp(true);
+      clearInterval(id)
+      console.log(id)
     }
     console.log(cardList)
   }, [cardList])
 
   return (
-    <>
+    <section className="gameboard">
+      {/* <Timer sec={5} min={0} /> */}
       {children}
       <div className="cards-container">
-        {cardList.map((card) => <Card
-          key={card.id}
-          id={card.id}
-          selected={card.selected}
-          turnedUp={card.turnedUp}
-          imageSource={card.imageSource} />)}
+        {/* {(allTurnedUp) ?
+          <h1>VOCÊ GANHOU!</h1>
+          :
+          cardList.map((card) => <Card
+            key={card.id}
+            id={card.id}
+            selected={card.selected}
+            turnedUp={card.turnedUp}
+            imageSource={card.imageSource} />)
+        } */}
+        {renderingConditions()}
       </div>
       <button
+        className="navigation-button"
+        id="back-button"
         onClick={() => navigate('/')}
       >
         Voltar
       </button>
-    </>
+    </section>
   )
 }
 export default GameBoard;

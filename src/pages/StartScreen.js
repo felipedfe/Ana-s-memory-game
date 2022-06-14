@@ -70,7 +70,9 @@ function StartScreen({ children }) {
         </div>
         <div className="title-part-2">
           <h3 className="title">da</h3>
-          <h1 className="ana-title">*Ana*</h1>
+          <p className="heart-icon-l">&hearts;</p>
+          <h1 className="ana-title">Ana</h1>
+          <p className="heart-icon-r">&hearts;</p>
         </div>
       </section>
       <section className='buttons-container'>
@@ -111,7 +113,7 @@ function StartScreen({ children }) {
           </div> :
           <div className="difficulty-btns-container">
             <button
-              className="easy-button"
+              className="navigation-button"
               type="button"
               value="easy"
               onClick={(event) => { difficultySelection(event) }}
@@ -119,7 +121,7 @@ function StartScreen({ children }) {
               Fácil
             </button>
             <button
-              className="hard-button"
+              className="navigation-button"
               type="button"
               value="hard"
               onClick={(event) => { difficultySelection(event) }}
