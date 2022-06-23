@@ -28,7 +28,7 @@ function Card(props) {
   }
 
   return (
-    <div className="card-container">
+    <div className="card-item">
       <button
         type="button"
         className="card-button"

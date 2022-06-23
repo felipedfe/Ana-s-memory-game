@@ -1,15 +1,41 @@
 .header-section {
-  height: 47px;
-  /* background-color: rgb(132, 12, 202); */
-  background-color: rgb(147, 52, 125);;
-  /* border-bottom: 5px solid rgb(255, 255, 255); */
-  margin-bottom: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  height: 47px;
+  background-color: rgb(98, 39, 165);
   color: white;
+  margin-bottom: 40px;
 }
 
 .timer-container {
-  margin-top: 5px;
-  font-size: 20px;
+  margin: auto;
+  font-size: 1.5rem;
+  /* background-color: aqua; */
+}
+
+.timer-container h1 {
+  margin-left: 100px;
+}
+
+.pink-mode-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: solid white 3px;
+  background-color: rgb(237, 120, 255);
+  margin-right: 50px;
+}
+
+.pink-mode-button:hover {
+  background-color: rgb(242, 158, 255);
+}
+
+#pink .header-section {
+  background-color: rgb(147, 52, 125);
+}
+
+.pink-mode-text {
+  font-weight: 600;
+  margin-right: 10px;
 }

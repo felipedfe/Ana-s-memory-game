@@ -10,7 +10,8 @@ function StartScreen({ children }) {
 
   const { cardList,
     setCardList,
-    backImage,
+    setDifficultyLevel,
+    theme,
     setBackImage } = useContext(myContext);
 
   const navigate = useNavigate();
@@ -29,9 +30,13 @@ function StartScreen({ children }) {
     setSelectedDifficulty(true);
     switch (value) {
       case 'easy':
-        return setCardList(filterByDifficulty(NUM_OF_CARDS_EASY))
+        setCardList(filterByDifficulty(NUM_OF_CARDS_EASY));
+        setDifficultyLevel(value);
+        break;
       case 'hard':
-        return setCardList(filterByDifficulty(NUM_OF_CARDS_HARD))
+        setCardList(filterByDifficulty(NUM_OF_CARDS_HARD));
+        setDifficultyLevel(value);
+        break;
       default:
         return null;
     }
@@ -62,7 +67,7 @@ function StartScreen({ children }) {
   }, [])
 
   return (
-    <main>
+    <main id={theme}>
       {children}
       <section className="title-section">
         <div className="title-part-1">

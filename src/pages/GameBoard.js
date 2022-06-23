@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import myContext from '../context/myContext';
 import Card from '../components/Card';
-import Timer from '../components/Timer';
 import '../style/Gameboard.css'
 
 function GameBoard({ children }) {
@@ -14,10 +13,14 @@ function GameBoard({ children }) {
     setIdsForComparison,
     setWaitForTimeout,
     timeOver,
-    setTimeOver,
+    difficultyLevel,
+    theme,
     id } = useContext(myContext);
 
   const navigate = useNavigate();
+
+  const location = useLocation();
+  console.log(location);
 
   // State
   const [allTurnedUp, setAllTurnedUp] = useState(false)
@@ -55,10 +58,10 @@ function GameBoard({ children }) {
   const renderingConditions = () => {
     if (timeOver) {
       console.log("--->", timeOver)
-      return <h1>Você perdeu...</h1>
+      return <h1 className="end-message">Você perdeu!</h1>
     }
     if (allTurnedUp) {
-      return <h1>Você Ganhou!</h1>
+      return <h1 className="end-message">Você Ganhou!</h1>
     } else {
       console.log(timeOver)
       return cardList.map((card) => <Card
@@ -99,20 +102,9 @@ function GameBoard({ children }) {
   }, [cardList])
 
   return (
-    <section className="gameboard">
-      {/* <Timer sec={5} min={0} /> */}
+    <section id={theme} className="gameboard">
       {children}
-      <div className="cards-container">
-        {/* {(allTurnedUp) ?
-          <h1>VOCÊ GANHOU!</h1>
-          :
-          cardList.map((card) => <Card
-            key={card.id}
-            id={card.id}
-            selected={card.selected}
-            turnedUp={card.turnedUp}
-            imageSource={card.imageSource} />)
-        } */}
+      <div className={difficultyLevel === 'easy'? "cards-container-easy":"cards-container"}>
         {renderingConditions()}
       </div>
       <button

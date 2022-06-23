@@ -10,6 +10,8 @@ function MyProvider(props) {
   const [backImage, setBackImage] = useState('');
   const [timeOver, setTimeOver] = useState(false);
   const [id, setId] = useState(undefined);
+  const [difficultyLevel, setDifficultyLevel] = useState('');
+  const [theme, setTheme] = useState('');
 
   const providerState = {
     cardList,
@@ -25,7 +27,11 @@ function MyProvider(props) {
     timeOver,
     setTimeOver,
     id,
-    setId
+    setId,
+    difficultyLevel,
+    setDifficultyLevel,
+    theme,
+    setTheme,
   }
   return (
     <myContext.Provider value={providerState}>

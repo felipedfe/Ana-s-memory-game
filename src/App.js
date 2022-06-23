@@ -5,26 +5,22 @@ import './App.css';
 import MyProvider from './provider/MyProvider';
 import StartScreen from './pages/StartScreen';
 import GameBoard from './pages/GameBoard';
-import Options from './pages/Options';
 import Header from './components/Header';
 
 function App() {
+  // const { theme } = useContext(myContext);
   return (
     <MyProvider>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={
-          <StartScreen>
-            <Header />
-          </StartScreen>} />
+            <StartScreen>
+              <Header />
+            </StartScreen>} />
           <Route exact path="/gameboard" element={
-          <GameBoard>
-            <Header />
-          </GameBoard>} />
-          <Route exact path="/options" element={
-          <Options>
-            <Header />
-          </Options>} />
+            <GameBoard>
+              <Header />
+            </GameBoard>} />
         </Routes>
       </BrowserRouter>
     </MyProvider>

@@ -3,18 +3,3 @@
   margin: 0;
   padding: 0;
 }
-
-body {
-  background-color: rgb(203, 250, 253);
-}
-
-.cards-container {
-  display: flex;
-}
-
-.card-button {
-  border: none;
-  padding: 0;
-  background: none;
-  margin: 10px ;
-}

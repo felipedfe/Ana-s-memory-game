@@ -7,7 +7,7 @@ body {
 .title {
   font-family: 'Amatic SC', cursive;
   text-shadow: 6px 6px rgb(66, 224, 255);
-  color: rgb(132, 12, 202);
+  color: rgb(98, 39, 165);
   /* background-color: yellow; */
 }
 
@@ -16,8 +16,8 @@ body {
   background-color: rgb(255, 255, 255);
   box-shadow: 8px 8px rgb(66, 224, 255);
   /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
+flex-direction: column;
+justify-content: center; */
   margin: auto;
   width: 60%;
   display: flex;
@@ -40,7 +40,7 @@ body {
 }
 
 h2 {
-  
+
   /* font-size: 10vw; */
 }
 
@@ -51,6 +51,7 @@ h3 {
 
 .ana-title {
   /* animation: blinker 1s step-start infinite; */
+  animation: blinker-ana 1s step-start infinite;
   font-family: 'Amatic SC', cursive;
   font-size: 220px;
   color: rgb(84, 226, 56);
@@ -62,6 +63,7 @@ h3 {
   margin-top: 10px;
   font-size: 100px;
 }
+
 .heart-icon-l {
   /* animation: blinker 1s step-start infinite; */
   margin-top: 10px;
@@ -91,10 +93,10 @@ h3 {
   padding-right: 15px;
   border-radius: 10px;
   color: rgb(255, 255, 255);
-  background-color: rgb(147, 52, 125);
+  background-color: rgb(98, 39, 165);
   box-shadow: 5px 5px rgb(255, 255, 255);
   font-weight: 700;
-  border: none; 
+  border: none;
   /* font-size: large; */
   /* font-kerning: none; */
   /* margin-top: 20px; */
@@ -111,12 +113,12 @@ h3 {
   justify-content: center;
 }
 
-.choose-text{
+.choose-text {
   display: flex;
   justify-content: center;
 }
 
-.backimages-container{
+.backimages-container {
   margin-top: 25px;
   /* background-color: red; */
   display: flex;
@@ -131,8 +133,65 @@ h4 {
   background-color: white;
 }
 
+/* ========== Pink Mode ========== */
+/* #pink {
+background-color: pink;
+background-image: url('../images/fundo/bolas3.png');
+background-size: 80px;
+} */
+
+#pink .navigation-button {
+  background-color: rgb(147, 52, 125);
+}
+
+#pink .title {
+  text-shadow: 6px 6px pink;
+  color: rgb(189, 14, 166);
+}
+
+#pink .title-section {
+  box-shadow: 8px 8px rgb(237, 120, 255);
+}
+
+/* ========== Animações ========== */
 @keyframes blinker {
-  25% {
+  20% {
     color: rgb(255, 0, 8);
   }
+
+  40% {
+    color: rgb(47, 0, 255);
+  }
+
+  60% {
+    color: rgb(255, 0, 217);
+  }
+
+  80% {
+    color: rgb(255, 217, 0);
+  }
+
+  100% {
+    color: rgb(62, 219, 240);
+  }
 }
+
+@keyframes blinker-ana {
+  25% {
+    color: rgb(20, 205, 0);
+  }
+
+  50% {
+    color: rgb(4, 0, 255);
+  }
+
+  75% {
+    color: rgb(255, 82, 215);
+  }
+
+  100% {
+    color: rgb(130, 47, 255);
+  }
+}
+
+/* background-color: rgb(147, 52, 125); */
