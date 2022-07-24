@@ -61,7 +61,7 @@ function StartScreen({ children }) {
       return imagesList;
     };
 
-    const cardImages = importAllImages(require.context('../images/', false, /\.png$/i))
+    const cardImages = importAllImages(require.context('../images/cartas-ana', false, /\.png$/i))
     setCardList(cardImages);
     // console.log(cardImages);
   }, [])

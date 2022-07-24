@@ -3,3 +3,9 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: rgb(151, 255, 148);
+  background-image: url('../public/bolas4.png');
+  background-size: 80px;
+}

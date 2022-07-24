@@ -1,8 +1,8 @@
-body {
+/* body {
   background-color: rgb(151, 255, 148);
-  background-image: url('../images/fundo/bolas3.png');
+  background-image: url('../../public/bolas-pink.png');
   background-size: 80px;
-}
+} */
 
 .title {
   font-family: 'Amatic SC', cursive;
@@ -127,6 +127,7 @@ h3 {
 
 .cardBack {
   margin-right: 15px;
+  width: 100px;
 }
 
 h4 {
