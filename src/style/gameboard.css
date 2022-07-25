@@ -3,16 +3,10 @@ img {
 }
 
 .cards-container {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 10px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* width: 10%; */
-  /* width: 1000px; */
   margin: auto;
-  /* background-color: rgb(255, 255, 4); */
 }
 
 .cards-container-easy {
@@ -20,7 +14,6 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  /* background-color: rgb(255, 255, 4); */
   width: 1100px;
 }
 
@@ -42,8 +35,15 @@ img {
   font-size: 220px;
   animation: blinker 1s step-start infinite;
   text-shadow: 6px 6px rgb(154, 31, 255);
-  /* box-shadow: 8px 8px rgb(66, 224, 255); */
   background-color: rgb(255, 255, 255);
+}
 
+.anima-coracao {
+  width: 400px;
+}
 
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

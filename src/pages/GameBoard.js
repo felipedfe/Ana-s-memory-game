@@ -58,10 +58,20 @@ function GameBoard({ children }) {
   const renderingConditions = () => {
     if (timeOver) {
       console.log("--->", timeOver)
-      return <h1 className="end-message">Você perdeu!</h1>
+      return (
+        <div className="message-container">
+          <h1 className="end-message">Você Perdeu!</h1>
+          <img className="anima-coracao" alt="coração triste" src="coracao_triste.gif"/>
+        </div>
+      )
     }
     if (allTurnedUp) {
-      return <h1 className="end-message">Você Ganhou!</h1>
+      return (
+        <div className="message-container">
+          <h1 className="end-message">Você Ganhou!</h1>
+          <img className="anima-coracao" alt="coração triste" src="coracao_feliz.gif"/>
+        </div>
+      )
     } else {
       console.log(timeOver)
       return cardList.map((card) => <Card
@@ -104,7 +114,7 @@ function GameBoard({ children }) {
   return (
     <section id={theme} className="gameboard">
       {children}
-      <div className={difficultyLevel === 'easy'? "cards-container-easy":"cards-container"}>
+      <div className={difficultyLevel === 'easy' ? "cards-container-easy" : "cards-container"}>
         {renderingConditions()}
       </div>
       <button

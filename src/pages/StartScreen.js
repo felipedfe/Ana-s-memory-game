@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import myContext from '../context/myContext';
-import backImage1, { backImage2, backImage3 } from '../images/back-image';
+import { backImage1, backImage2, backImage3 } from '../images/back-image';
 import '../style/StartScreen.css'
 
 function StartScreen({ children }) {
@@ -42,8 +42,68 @@ function StartScreen({ children }) {
     }
   }
 
-  const backImageSelection = (backImageName) => {
-    setBackImage(backImageName);
+  // Função que renderiza os botões para escolha da dificuldade
+  const chooseDificulty = () => {
+    return (
+      <div className="difficulty-btns-container">
+        <button
+          className="navigation-button"
+          type="button"
+          value="easy"
+          onClick={(event) => { difficultySelection(event) }}
+        >
+          Fácil
+        </button>
+        <button
+          className="navigation-button"
+          type="button"
+          value="hard"
+          onClick={(event) => { difficultySelection(event) }}
+        >
+          Difícil
+        </button>
+      </div>
+    )
+  }
+
+  // Função que renderiza as opções para escolha do verso das cartas
+  const chooseCardBack = () => {
+    return (
+      <div className="choose-cardback-container">
+        <div className="choose-text">
+          <h4>Selecione a imagem do verso da carta :)</h4>
+        </div>
+        <div
+          className="backimages-container"
+          onClick={() => navigate('/gameboard')}
+        >
+          <input
+            className="cardBack"
+            type="image"
+            name="backImage3"
+            alt="coração"
+            src={backImage3}
+            onClick={() => setBackImage(backImage3)}
+          />
+          <input
+            className="cardBack"
+            type="image"
+            name="backImage3"
+            alt="xis"
+            src={backImage2}
+            onClick={() => setBackImage(backImage2)}
+          />
+          <input
+            className="cardBack"
+            type="image"
+            name="backImage3"
+            alt="cinza"
+            src={backImage1}
+            onClick={() => setBackImage(backImage1)}
+          />
+        </div>
+      </div>
+    )
   }
 
   // Busca as imagens da pasta "images"
@@ -82,58 +142,8 @@ function StartScreen({ children }) {
       </section>
       <section className='buttons-container'>
         {selectedDifficulty ?
-          <div className="choose-cardback-container">
-            <div className="choose-text">
-              <h4>Selecione a imagem do verso da carta :)</h4>
-            </div>
-            <div
-              className="backimages-container"
-              onClick={() => navigate('/gameboard')}
-            >
-              <input
-                className="cardBack"
-                type="image"
-                name="backImage3"
-                alt="coração"
-                src={backImage3}
-                onClick={() => backImageSelection(backImage3)}
-              />
-              <input
-                className="cardBack"
-                type="image"
-                name="backImage3"
-                alt="xis"
-                src={backImage2}
-                onClick={() => backImageSelection(backImage2)}
-              />
-              <input
-                className="cardBack"
-                type="image"
-                name="backImage3"
-                alt="cinza"
-                src={backImage1}
-                onClick={() => backImageSelection(backImage1)}
-              />
-            </div>
-          </div> :
-          <div className="difficulty-btns-container">
-            <button
-              className="navigation-button"
-              type="button"
-              value="easy"
-              onClick={(event) => { difficultySelection(event) }}
-            >
-              Fácil
-            </button>
-            <button
-              className="navigation-button"
-              type="button"
-              value="hard"
-              onClick={(event) => { difficultySelection(event) }}
-            >
-              Difícil
-            </button>
-          </div>
+          chooseCardBack() :
+          chooseDificulty()
         }
       </section>
     </main>

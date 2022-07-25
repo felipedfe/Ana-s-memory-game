@@ -14,14 +14,10 @@ function Header() {
       setTheme('pink');
       document.body.style.backgroundColor = "rgb(237, 120, 255)"
       document.body.style.backgroundImage = "url('bolas-pink.png')";
-      // document.body.setAttribute('style', 'background-image: url("../../public/bolas4.png")' )
-      // document.body.style.backgroundSize = "80px"
-      console.log(document.body)
     } else {
       setTheme('');
       document.body.style.backgroundColor = "rgb(151, 255, 148)";
       document.body.style.backgroundImage = "url('bolas4.png')";
-      // document.body.style.backgroundSize = "80px"
     }
   };
 
@@ -36,19 +32,12 @@ function Header() {
     }
   }
 
-  // só testando o useRef, ele funciona como um querySelector
-  const pinkModeText = useRef();
 
   return (
     <section className="header-section">
-      <button type="button" onClick={() => {
-        pinkModeText.current.classList.add("teste");
-        console.log(pinkModeText.current.classList)
-        console.log(pinkModeText.current)
-      }}>teste useRef</button>
       {pathname === '/gameboard' &&
         renderTimer()}
-      <span className="pink-mode-text" ref={pinkModeText}>PINK MODE &rarr;</span>
+      <span className="pink-mode-text" >PINK MODE &rarr;</span>
       <button className="pink-mode-button"
         type="button"
         onClick={toggleTheme}

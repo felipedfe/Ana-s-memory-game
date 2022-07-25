@@ -8,7 +8,6 @@ import GameBoard from './pages/GameBoard';
 import Header from './components/Header';
 
 function App() {
-  // const { theme } = useContext(myContext);
   return (
     <MyProvider>
       <BrowserRouter>
