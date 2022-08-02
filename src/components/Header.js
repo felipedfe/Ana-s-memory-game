@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext } from 'react'
 import Timer from './Timer';
 import '../style/Header.css'
 import { useLocation } from 'react-router-dom';

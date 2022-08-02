@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import myContext from "../context/myContext";
-// import backImage1 from '../images/back-image'
 
 function Card(props) {
   const { id, imageSource, selected, turnedUp } = props;

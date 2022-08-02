@@ -6,8 +6,6 @@ function Timer(props) {
   // State
   const [seconds, setSeconds] = useState(sec);
   const [minutes, setMinutes] = useState(min);
-  // const [id, setId] = useState(undefined);
-  // const [timeOver, setTimeOver] = useState(false);
 
   const { timeOver, setTimeOver, id, setId } = useContext(myContext)
 
