@@ -32,7 +32,6 @@ function Timer(props) {
         console.log(timeOver)
         console.log('acabou')
         setTimeOver(true);
-        // clearInterval(id)
       }
     }
   }, [seconds, minutes])

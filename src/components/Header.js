@@ -9,7 +9,6 @@ function Header() {
   const { difficultyLevel, theme, setTheme } = useContext(myContext);
 
   const toggleTheme = () => {
-    console.log(theme);
     if (theme === '') {
       setTheme('pink');
       document.body.style.backgroundColor = "rgb(237, 120, 255)"

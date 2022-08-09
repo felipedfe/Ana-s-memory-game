@@ -43,7 +43,7 @@ function StartScreen({ children }) {
   }
 
   // Função que renderiza os botões para escolha da dificuldade
-  const chooseDificulty = () => {
+  const chooseDifficulty = () => {
     return (
       <div className="difficulty-btns-container">
         <button
@@ -123,7 +123,6 @@ function StartScreen({ children }) {
 
     const cardImages = importAllImages(require.context('../images/cartas-ana', false, /\.png$/i))
     setCardList(cardImages);
-    // console.log(cardImages);
   }, [])
 
   return (
@@ -143,7 +142,7 @@ function StartScreen({ children }) {
       <section className='buttons-container'>
         {selectedDifficulty ?
           chooseCardBack() :
-          chooseDificulty()
+          chooseDifficulty()
         }
       </section>
     </main>
