@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Timer from './Timer';
-import '../style/Header.css'
+import '../style/header.css'
 import { useLocation } from 'react-router-dom';
 import myContext from '../context/myContext';
 

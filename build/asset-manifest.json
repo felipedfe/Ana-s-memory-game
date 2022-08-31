@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/Ana-s-memory-game/static/css/main.537a2344.css",
+    "main.js": "/Ana-s-memory-game/static/js/main.c5657011.js",
+    "static/js/787.1628122e.chunk.js": "/Ana-s-memory-game/static/js/787.1628122e.chunk.js",
+    "static/media/04-1.png": "/Ana-s-memory-game/static/media/04-1.d0d4904dbdd3a9b2a785.png",
+    "static/media/04-2.png": "/Ana-s-memory-game/static/media/04-2.d0d4904dbdd3a9b2a785.png",
+    "static/media/03-1.png": "/Ana-s-memory-game/static/media/03-1.a6e9dd3d163cda6f7b98.png",
+    "static/media/03-2.png": "/Ana-s-memory-game/static/media/03-2.a6e9dd3d163cda6f7b98.png",
+    "static/media/10-1.png": "/Ana-s-memory-game/static/media/10-1.a8fccc3f352f47b9e6dd.png",
+    "static/media/10-2.png": "/Ana-s-memory-game/static/media/10-2.a8fccc3f352f47b9e6dd.png",
+    "static/media/11-1.png": "/Ana-s-memory-game/static/media/11-1.b8ec1e4935dca8d11fbe.png",
+    "static/media/11-2.png": "/Ana-s-memory-game/static/media/11-2.b8ec1e4935dca8d11fbe.png",
+    "static/media/09-1.png": "/Ana-s-memory-game/static/media/09-1.898f6507f310f06008ca.png",
+    "static/media/09-2.png": "/Ana-s-memory-game/static/media/09-2.898f6507f310f06008ca.png",
+    "static/media/08-1.png": "/Ana-s-memory-game/static/media/08-1.77e8d7b64da9434ce8fe.png",
+    "static/media/08-2.png": "/Ana-s-memory-game/static/media/08-2.77e8d7b64da9434ce8fe.png",
+    "static/media/02-1.png": "/Ana-s-memory-game/static/media/02-1.4ece21e6c4936cc5708b.png",
+    "static/media/02-2.png": "/Ana-s-memory-game/static/media/02-2.4ece21e6c4936cc5708b.png",
+    "static/media/12-1.png": "/Ana-s-memory-game/static/media/12-1.09aabc0f9d2d524c3724.png",
+    "static/media/12-2.png": "/Ana-s-memory-game/static/media/12-2.09aabc0f9d2d524c3724.png",
+    "static/media/01-1.png": "/Ana-s-memory-game/static/media/01-1.8ce780eeb153e4b09a31.png",
+    "static/media/01-2.png": "/Ana-s-memory-game/static/media/01-2.8ce780eeb153e4b09a31.png",
+    "static/media/05-1.png": "/Ana-s-memory-game/static/media/05-1.05b05a593d7afb29104b.png",
+    "static/media/05-2.png": "/Ana-s-memory-game/static/media/05-2.05b05a593d7afb29104b.png",
+    "static/media/06-1.png": "/Ana-s-memory-game/static/media/06-1.4d4c1720a6e62c693842.png",
+    "static/media/06-2.png": "/Ana-s-memory-game/static/media/06-2.4d4c1720a6e62c693842.png",
+    "static/media/07-1.png": "/Ana-s-memory-game/static/media/07-1.8be8c60cecaecb277449.png",
+    "static/media/07-2.png": "/Ana-s-memory-game/static/media/07-2.8be8c60cecaecb277449.png",
+    "static/media/back2.png": "/Ana-s-memory-game/static/media/back2.5a148f0ce490b385c933.png",
+    "static/media/back3.png": "/Ana-s-memory-game/static/media/back3.74ce10c52f2bd32d8b41.png",
+    "static/media/back.png": "/Ana-s-memory-game/static/media/back.b940faa147d505ba5634.png",
+    "index.html": "/Ana-s-memory-game/index.html",
+    "main.537a2344.css.map": "/Ana-s-memory-game/static/css/main.537a2344.css.map",
+    "main.c5657011.js.map": "/Ana-s-memory-game/static/js/main.c5657011.js.map",
+    "787.1628122e.chunk.js.map": "/Ana-s-memory-game/static/js/787.1628122e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.537a2344.css",
+    "static/js/main.c5657011.js"
+  ]
+}

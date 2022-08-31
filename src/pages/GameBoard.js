@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import myContext from '../context/myContext';
 import Card from '../components/Card';
-import '../style/Gameboard.css'
+import '../style/gameboard.css'
 
 function GameBoard({ children }) {
   const { cardList,
