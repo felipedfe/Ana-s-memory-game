@@ -112,8 +112,9 @@ function GameBoard({ children }) {
   }, [cardList])
 
   return (
-    <section id={theme} className="gameboard">
+    <>
       {children}
+    <section id={theme} className="gameboard">
       <div className={difficultyLevel === 'easy' ? "cards-container-easy" : "cards-container"}>
         {renderingConditions()}
       </div>
@@ -125,6 +126,7 @@ function GameBoard({ children }) {
         Voltar
       </button>
     </section>
+    </>
   )
 }
 export default GameBoard;

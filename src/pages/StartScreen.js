@@ -126,26 +126,30 @@ function StartScreen({ children }) {
   }, [])
 
   return (
-    <main id={theme}>
+    <>
       {children}
-      <section className="title-section">
-        <div className="title-part-1">
-          <h2 className="title">Jogo da Memória</h2>
-        </div>
-        <div className="title-part-2">
-          <h3 className="title">da</h3>
-          <p className="heart-icon-l">&hearts;</p>
-          <h1 className="ana-title">Ana</h1>
-          <p className="heart-icon-r">&hearts;</p>
-        </div>
-      </section>
+      <main id={theme}>
+        <section className="title-section">
+          <div className="title-background">
+            <div className="title-part-1">
+              <h2 className="title">Jogo da Memória</h2>
+            </div>
+            <div className="title-part-2">
+              <h3 className="title">da</h3>
+              <p className="heart-icon-l">&hearts;</p>
+              <h1 className="ana-title">Ana</h1>
+              <p className="heart-icon-r">&hearts;</p>
+            </div>
+          </div>
+        </section>
+      </main>
       <section className='buttons-container'>
         {selectedDifficulty ?
           chooseCardBack() :
           chooseDifficulty()
         }
       </section>
-    </main>
+    </>
   )
 }
 

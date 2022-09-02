@@ -5,13 +5,20 @@
 }
 
 .title-section {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 8px 8px rgb(66, 224, 255);
   margin: auto;
   width: 60%;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.title-background {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 8px 8px rgb(66, 224, 255);
+  margin: auto;
+  width: 900px;
+  height: 450px;
 }
 
 .title-part-1 {
@@ -25,9 +32,6 @@
   animation: blinker 1s step-start infinite;
   display: flex;
   justify-content: center;
-}
-
-h3 {
   font-size: 110px;
 }
 
@@ -159,5 +163,27 @@ h4 {
 
   100% {
     color: rgb(130, 47, 255);
+  }
+}
+
+/* Media Query */
+
+@media all and (min-width: 1900px) {
+  .title-background {
+    width: 1200px;
+    height: 600px;
+  }
+  
+  .title-part-1 {
+    font-size: 140px;
+  }
+  
+  .title-part-2 {
+    font-size: 160px;
+  }
+  
+  .ana-title {
+    font-size: 270px;
+  
   }
 }

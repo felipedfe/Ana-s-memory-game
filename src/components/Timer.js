@@ -39,11 +39,11 @@ function Timer(props) {
   return (
     <>
       <div className="timer-container">
-        <h1>
+        <span>
           {minutes.toString().padStart(2, "0")}
           :
           {seconds.toString().padStart(2, "0")}
-        </h1>
+        </span>
       </div>
     </>
   )
