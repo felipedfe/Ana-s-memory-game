@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import myContext from '../context/myContext';
 import { backImage1, backImage2, backImage3 } from '../images/back-image';
-import '../style/startScreen.css'
+import '../style/startscreen.css'
 
 function StartScreen({ children }) {
   // State
