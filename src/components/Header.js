@@ -31,7 +31,6 @@ function Header() {
     }
   }
 
-
   return (
     <section className="header-section">
       {pathname === '/gameboard' &&
