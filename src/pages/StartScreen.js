@@ -128,7 +128,7 @@ function StartScreen({ children }) {
   return (
     <>
       {children}
-      <main id={theme}>
+      <main id={theme} className="main-start">
         <section className="title-section">
           <div className="title-background">
             <div className="title-part-1">

@@ -4,6 +4,11 @@
   color: rgb(98, 39, 165);
 }
 
+.main-start {
+  display: flex;
+  justify-content: center;
+}
+
 .title-section {
   margin: auto;
   width: 60%;
@@ -17,7 +22,7 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 8px 8px rgb(66, 224, 255);
   margin: auto;
-  width: 900px;
+  width: 770px;
   height: 450px;
 }
 
