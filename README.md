@@ -9,7 +9,7 @@ Foi feita em React utilizando componentes funcionais, Context API e React Hooks.
 - Javascript
 - HTML
 - CSS
-- React
+- React.js
 - Context API
 
 ## •Executando a aplicação
