@@ -1,4 +1,5 @@
 # Jogo da Memória da Ana
+![Tela da aplicação](https://github.com/felipedfe/felipedfe.github.io/blob/main/imagens/01-jogodamemoria.jpg)
 
 ## •Descrição
 Um jogo da memória que fiz utilizando os desenhos da minha filha! A aplicação possui dois níveis de dificuldade, sendo o modo fácil com 12 cartas e o difícil com 24.
