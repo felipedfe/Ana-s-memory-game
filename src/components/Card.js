@@ -32,7 +32,7 @@ function Card(props) {
         type="button"
         className="card-button"
         onClick={(selected || turnedUp || waitForTimeout) ? null : handleClick}>
-        <img src={(selected || turnedUp) ? imageSource : backImage} alt={id} />
+        <img src={(selected || turnedUp) ? imageSource : backImage} alt={id} draggable={false}/>
       </button>
     </div>
   )
