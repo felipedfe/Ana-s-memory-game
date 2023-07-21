@@ -109,7 +109,7 @@ function GameBoard({ children }) {
       console.log(id)
     }
     console.log("CARD LIST: ", cardList)
-  }, [cardList])
+  }, [cardList, id])
 
   return (
     <>
