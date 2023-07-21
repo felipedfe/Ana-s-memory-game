@@ -108,7 +108,7 @@ function GameBoard({ children }) {
       clearInterval(id)
       console.log(id)
     }
-    console.log(cardList)
+    console.log("CARD LIST: ", cardList)
   }, [cardList])
 
   return (
