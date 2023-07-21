@@ -1,4 +1,4 @@
-img {
+.card-item img {
   width: 150px;
 }
 
@@ -7,6 +7,11 @@ img {
   flex-direction: column;
   align-items: center;
   height: 60vh;
+}
+
+.gameboard2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .cards-container {
@@ -28,7 +33,7 @@ img {
   border: none;
   padding: 0;
   background: none;
-  margin: 10px ;
+  margin: 10px;
 }
 
 #back-button {
@@ -38,11 +43,13 @@ img {
 }
 
 .end-message {
-  font-family: 'Amatic SC', cursive;
+  /* font-family: 'Amatic SC', cursive;
   font-size: 220px;
   animation: blinker 1s step-start infinite;
   text-shadow: 6px 6px rgb(154, 31, 255);
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255); */
+  color: #383953;
+  font-size: 4rem;
 }
 
 .anima-coracao {
@@ -53,6 +60,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 15%;
 }
 
 /* Media Query */
@@ -61,7 +69,8 @@ img {
   .gameboard {
     height: 75vh;
   }
-  img {
+
+  .card-item img {
     width: 200px;
   }
 }

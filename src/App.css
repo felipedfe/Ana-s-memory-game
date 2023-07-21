@@ -2,10 +2,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Noticia Text', serif;
 }
 
-body {
-  background-color: rgb(151, 255, 148);
-  background-image: url('../public/bolas4.png');
-  background-size: 80px;
+
+
+.background-img {
+    /* background-color: rgb(151, 255, 148); */
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../public/fundo-mata2.png');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    /* height: 100vh; */
 }

@@ -60,8 +60,8 @@ function GameBoard({ children }) {
       console.log("--->", timeOver)
       return (
         <div className="message-container">
-          <h1 className="end-message">Você Perdeu!</h1>
-          <img className="anima-coracao" alt="coração triste" src="coracao_triste.gif"/>
+          <h1 className="end-message">Você Perdeu :(</h1>
+          {/* <img className="anima-coracao" alt="coração triste" src="coracao_triste.gif" /> */}
         </div>
       )
     }
@@ -69,7 +69,7 @@ function GameBoard({ children }) {
       return (
         <div className="message-container">
           <h1 className="end-message">Você Ganhou!</h1>
-          <img className="anima-coracao" alt="coração triste" src="coracao_feliz.gif"/>
+          {/* <img className="anima-coracao" alt="coração triste" src="coracao_feliz.gif" /> */}
         </div>
       )
     } else {
@@ -114,10 +114,12 @@ function GameBoard({ children }) {
   return (
     <>
       {children}
-    <section id={theme} className="gameboard">
-      <div className={difficultyLevel === 'easy' ? "cards-container-easy" : "cards-container"}>
-        {renderingConditions()}
-      </div>
+      <div className="background-img"></div>
+      <section id={theme} className="gameboard2">
+        <div className={difficultyLevel === 'easy' ? "cards-container-easy" : "cards-container"}>
+          {renderingConditions()}
+        </div>
+      </section>
       <button
         className="navigation-button"
         id="back-button"
@@ -125,7 +127,6 @@ function GameBoard({ children }) {
       >
         Voltar
       </button>
-    </section>
     </>
   )
 }

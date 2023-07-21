@@ -6,19 +6,22 @@ import myContext from '../context/myContext';
 
 function Header() {
   const { pathname } = useLocation();
-  const { difficultyLevel, theme, setTheme } = useContext(myContext);
+  const { difficultyLevel, 
+    // theme, 
+    // setTheme 
+  } = useContext(myContext);
 
-  const toggleTheme = () => {
-    if (theme === '') {
-      setTheme('pink');
-      document.body.style.backgroundColor = "rgb(237, 120, 255)"
-      document.body.style.backgroundImage = "url('bolas-pink.png')";
-    } else {
-      setTheme('');
-      document.body.style.backgroundColor = "rgb(151, 255, 148)";
-      document.body.style.backgroundImage = "url('bolas4.png')";
-    }
-  };
+  // const toggleTheme = () => {
+  //   if (theme === '') {
+  //     setTheme('pink');
+  //     document.body.style.backgroundColor = "rgb(237, 120, 255)"
+  //     document.body.style.backgroundImage = "url('bolas-pink.png')";
+  //   } else {
+  //     setTheme('');
+  //     document.body.style.backgroundColor = "rgb(151, 255, 148)";
+  //     document.body.style.backgroundImage = "url('bolas4.png')";
+  //   }
+  // };
 
   const renderTimer = () => {
     switch (difficultyLevel) {
@@ -27,7 +30,7 @@ function Header() {
       case 'hard':
         return <Timer sec={50} min={1} />
       default:
-        return null;
+        return <Timer sec={50} min={1} />;
     }
   }
 
@@ -35,11 +38,11 @@ function Header() {
     <section className="header-section">
       {pathname === '/gameboard' &&
         renderTimer()}
-      <span className="pink-mode-text" >PINK MODE &rarr;</span>
-      <button className="pink-mode-button"
+      {/* <span className="pink-mode-text" >PINK MODE &rarr;</span> */}
+      {/* <button className="pink-mode-button"
         type="button"
         onClick={toggleTheme}
-      />
+      /> */}
     </section>
   )
 }
