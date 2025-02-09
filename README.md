@@ -1,18 +1,18 @@
-# Jogo da Memória da Ana
-![Tela da aplicação](https://github.com/felipedfe/felipedfe.github.io/blob/main/imagens/01-jogodamemoria.jpg)
+# Ana's Memory Game
+![Application Screen](https://github.com/felipedfe/felipedfe.github.io/blob/main/imagens/01-jogodamemoria.jpg)
 
-## •Descrição
-Um jogo da memória que fiz utilizando os desenhos da minha filha! A aplicação possui dois níveis de dificuldade, sendo o modo fácil com 12 cartas e o difícil com 24.
-Foi feita em React utilizando componentes funcionais, Context API e React Hooks.
+## •Description
+A memory game I created using my daughter's drawings! The application features two difficulty levels: easy mode with 12 cards and hard mode with 24 cards.  
+It was built with React using functional components, Context API, and React Hooks.
 
-## •Tecnologias e bibliotecas
-- Javascript
+## •Technologies and Libraries
+- JavaScript
 - HTML
 - CSS
 - React.js
 - Context API
 
-## •Executando a aplicação
-- Clone o repositório em sua máquina
-- No terminal, instale as dependência da aplicação: ```npm install```
-- Agora é só colocar a aplicação para rodar: ```npm start```
+## •Running the Application
+- Clone the repository to your machine.
+- In the terminal, install the application dependencies: `npm install`
+- Then simply run the application: `npm start`
